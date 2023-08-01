@@ -13,7 +13,7 @@ exports.getLibroById = async (req, res) => {
   try {
     const libro = await Libro.findById(req.params.id);
     if (!libro) {
-      return res.status(404).json({ error: "Libro no encontrado" });
+      return res.status(404).json({ error: "Libro noencontrado" });
     }
     res.status(200).json(libro);
   } catch (error) {
@@ -38,7 +38,7 @@ exports.updateLibro = async (req, res) => {
     });
 
     if (!libro) {
-      return res.status(404).json({ error: "Libro no encontrado" });
+      return res.status(404).json({ error: "Libro noencontrado" });
     }
 
     res.status(200).json(libro);
